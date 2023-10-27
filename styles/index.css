@@ -1,0 +1,163 @@
+@import '@eslovensko/idsk-react/dist/styles/idsk3_theme.css';
+@import '@skit-feedback/feedback-form/dist/styles/feedback.css';
+
+@tailwind components;
+@tailwind utilities;
+
+/* API katalog design */
+
+.idsk-accordion__content--open .idsk-accordion__content--open {
+  @apply border-0;
+}
+
+.idsk-accordion__content .idsk-accordion__content {
+  @apply border-b border-b-neutral-300;
+}
+
+.idsk-accordion__content--open .idsk-accordion__content-body .idsk-accordion__button {
+  @apply pt-0 pb-6 border-0 border-b-neutral-300;
+}
+
+.idsk-accordion__content--open .idsk-accordion__content-body .idsk-accordion {
+  @apply rounded-none border-0 border-b border-b-neutral-300;
+}
+/* End API katalog design */
+.grecaptcha-badge {
+ z-index: 9999;
+}
+
+.gap-8 {
+  gap: 1rem !important;
+}
+@layer components {
+  .idsk-accordion--gray .idsk-signpost .idsk-anchor-card {
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid transparent;
+    border-radius: 0;
+    @apply border-neutral-300 pt-0;
+  }
+  .idsk-accordion--gray .idsk-signpost:last-child .idsk-anchor-card {
+    @apply border-0;
+  }
+  .idsk-page-layout__heading__title {
+    word-break: break-word;
+    @apply pb-0 relative z-10;
+  }
+  .idsk-page-layout__heading__title-gray {
+    @apply mb-6 before:-z-10 before:absolute before:h-[300%] before:w-[200vw] before:-translate-x-1/2 before:bg-neutral-90 before:bottom-0;
+  }
+  #secondary-navigation-body a {
+    @apply underline;
+  }
+  .p-text ul,
+  .p-text ol {
+    @apply list-outside pl-4;
+  }
+  .p-text li > ul,
+  .p-text li > ol {
+    @apply ml-6;
+  }
+  .p-text ul {
+    @apply list-disc;
+  }
+  .idsk-accordion__content .p-text ul,
+  .idsk-accordion__content .p-text ol {
+    @apply pl-8;
+  }
+  .p-text ol {
+    @apply list-decimal;
+  }
+  .p-text a {
+    @apply text-primary underline hover:text-blue-600;
+  }
+  .p-text blockquote {
+    @apply p-4 my-4 border-l-4 bg-neutral-90 border-neutral-300 dark:border-neutral-500 dark:bg-neutral-800;
+  }
+  .p-text p {
+    @apply mt-3 first:mt-0 break-words;
+  }
+  .p-text-shrink p {
+    @apply mb-0;
+  }
+  .tooltip-from-drupal a {
+    @apply text-white underline hover:text-neutral-400;
+  }
+  .idsk-in-page-navigation .idsk-in-page-navigation__line {
+    @apply border-none tb2:border-solid pl-0 tb2:pl-5;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+div,
+p,
+a,
+span {
+  word-break: break-word;
+}
+abbr[data-tip] {
+  @apply inline-block font-bold underline decoration-dashed;
+}
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@screen dm1max {
+  .tooltip-from-drupal {
+    @apply !bottom-0 !right-0 !left-0 !top-auto w-full !m-0;
+  }
+}
+
+@media print {
+  #__nettle_bot_widget_root {
+    @apply hidden;
+  }
+
+  header,
+  footer {
+    @apply hidden;
+  }
+
+  .node-article > .comment-form,
+  .comments,
+  .share-links {
+    @apply hidden;
+  }
+
+  .idsk-page-layout__heading__title > div {
+    @apply p-0;
+  }
+
+  .idsk-page-layout__heading {
+    @apply pb-0;
+  }
+
+  .idsk-page-layout__breadcrumbs {
+    @apply hidden;
+  }
+
+  .idsk-anchor-card {
+    @apply break-inside-avoid-page;
+  }
+
+  img {
+    @apply break-inside-avoid-page;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.li-margin li {
+  margin-left: 16px;
+}
+
+.idsk-input-textarea--counter {
+  display: none;
+}

@@ -1,0 +1,13 @@
+ci
+node_modules
+test
+.dockerignore
+.env
+.env.local
+.gitignore
+.gitlab-ci.yml
+docker-compose*
+Dockerfile
+README.md
+helm_chart-version-dev.env
+upvs-web-svk-values.yml

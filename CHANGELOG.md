@@ -1,0 +1,75 @@
+- **d6a692e** (2023-10-05) generate changelog after push
+- **55877f9** (2023-10-05) fix
+- **610a8e1** (2023-10-05) Merge branch 'code_review' into develop
+- **1464ee0** (2023-10-05) https://gitlab.brainit.tech/skit_kav/skit_kav/-/issues/50
+- **ddaa979** (2023-10-05) Merge branch 'reminders' into develop
+- **c9225d0** (2023-10-05) comments #50
+- **ca521b4** (2023-10-04) changes after code review
+- **47a3553** (2023-10-04) delete unnecesary comment
+- **9e02349** (2023-10-04) Merge branch 'reminders' into develop
+- **86a7c09** (2023-10-04) slovensko.sk to skit.sk
+- **ca10840** (2023-10-04) remove console logs
+- **211f96c** (2023-10-04) slugg
+- **0d1aec3** (2023-10-04) fix
+- **1627542** (2023-10-04) Merge branch 'sitemap' into develop
+- **600261b** (2023-10-04) sitemap
+- **1c78787** (2023-10-04) https://gitlab.brainit.tech/skit_kav/skit_kav/-/issues/49
+- **c053614** (2023-10-04) no message
+- **ff2f36f** (2023-10-04) no message
+- **acde1ef** (2023-10-04) https://gitlab.brainit.tech/skit_kav/skit_kav/-/issues/48
+- **332d869** (2023-10-04) captcha key, using smtp over service in mailsender
+- **c0b18d6** (2023-10-03) no message
+- **afbd84f** (2023-10-03) no message
+- **afce7e1** (2023-10-03) form validation and errors showing
+- **7b2481e** (2023-10-03) email sending
+- **d593ac9** (2023-09-29) clean code
+- **d584064** (2023-09-28) Update .gitlab-ci.yml
+- **3162291** (2023-09-28) Update .gitlab-ci.yml
+- **9ad899c** (2023-09-28) docker-compose.yml cleanup and rework
+- **9f12006** (2023-09-26) forms in full width
+- **7984719** (2023-09-26) no message
+- **94ce168** (2023-09-20) feedback import fix
+- **78027a9** (2023-09-14) feedback ids
+- **f8c7a4e** (2023-09-08) fix translations
+- **56bbeb7** (2023-09-08) translations forms
+- **7eef36c** (2023-09-08) Merge branch 'layout' into develop
+- **49814e2** (2023-09-08) issues #3 + obsah
+- **23113f7** (2023-09-08) Merge branch 'develop' of https://gitlab.brainit.tech/skit_kav/skit_kav_fe into develop
+- **bfdd458** (2023-09-08) #27 request access to portal form
+- **13a334a** (2023-09-07) Merge branch 'reports' into develop
+- **63c5b61** (2023-09-07) reports search
+- **9d1bce2** (2023-09-07) login hidden
+- **fe098ab** (2023-09-06) fe forms pages and request data form
+- **c2723ea** (2023-09-05) Merge branch 'develop' of https://gitlab.brainit.tech/skit_kav/skit_kav_fe into develop
+- **9bbb746** (2023-09-05) multi env
+- **abac053** (2023-08-31) Merge branch 'dev_pm' into develop
+- **ba33c9a** (2023-08-31) add GA issues #22
+- **29d80fa** (2023-08-30) Fix typo in readme.md
+- **ca6beb3** (2023-08-30) Merge branch 'develop' of https://gitlab.brainit.tech/skit_kav/skit_kav_fe into develop
+- **bb07bb5** (2023-08-30) kav #34: ip comment block: comment form and response
+- **16b67e1** (2023-08-28) Merge branch 'dev_pm' into develop
+- **a99b6f7** (2023-08-28) Nevhodný komentár
+- **12b88d5** (2023-08-24) issues #14 attachment
+- **189af61** (2023-08-24) fix from camp for preview
+- **1a84a25** (2023-08-24) kav #19 search: remove console.logs
+- **90573be** (2023-08-23) search wip
+- **5a3b239** (2023-08-23) kav #6 display term on content
+- **084b57c** (2023-08-22) Merge branch 'develop' of https://gitlab.brainit.tech/skit_kav/skit_kav_fe into develop
+- **d367b05** (2023-08-22) kav #5 term lit
+- **920b988** (2023-08-22) issues #4
+- **3bd551b** (2023-08-22) comments
+- **14a3ef7** (2023-08-15) fix issues #30
+- **f03399e** (2023-08-15) issues #29 #30 #31 #32 - comments
+- **6fc738c** (2023-08-15) add s3 to config
+- **572daf4** (2023-08-14) link for images
+- **361d0fe** (2023-08-14) #16 Header
+- **63419cd** (2023-08-09) organizations search translate
+- **e95b311** (2023-08-09) init 2
+- **12d8901** (2023-08-01) fix error while loading page when meta.tag not exist
+- **6cf36ab** (2023-07-31) web.yml
+- **10964bd** (2023-07-31) chatbot commented
+- **09acc2d** (2023-07-31) no message
+- **0a60365** (2023-07-31) readme
+- **e156e8b** (2023-07-31) no message
+- **5673edd** (2023-07-31) init
+- **c8a7dad** (2023-07-31) Initial commit

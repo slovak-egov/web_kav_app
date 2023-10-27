@@ -1,0 +1,691 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IndexPage matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="page-layout"
+  >
+    <div
+      data-focus-guard="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="-1"
+    />
+    <div
+      data-focus-lock-disabled="disabled"
+    >
+      <header
+        class="header-container__wrapper sticky"
+      >
+        <div
+          class="secondary-navigation"
+        >
+          <div
+            class="secondary-navigation__header"
+          >
+            <div
+              class="secondary-navigation__heading"
+            >
+              Oficiálna stránka 
+              <button
+                class="secondary-navigation__heading-button"
+              >
+                verejnej správy SR 
+                <svg
+                  class="secondary-navigation__heading-button-icon"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m8.71 11.71 2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71H9.41c-.89 0-1.33 1.08-.7 1.71Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="dropdown__wrapper secondary-navigation__dropdown"
+            >
+              <button
+                class="dropdown"
+              >
+                <span>
+                  language.undefined
+                </span>
+                <svg
+                  class="dropdown__icon"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m8.71 11.71 2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71H9.41c-.89 0-1.33 1.08-.7 1.71Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+              <ul
+                class="dropdown__options hidden"
+                data-testid="dropdown-options"
+              />
+            </div>
+          </div>
+          <div
+            class="secondary-navigation__body hidden"
+            data-testid="secnav-children"
+          >
+            <div
+              class="grid grid-cols-1 gap-4 tb2:grid-cols-2 tb2:gap-8"
+              id="secondary-navigation-body"
+            >
+              <div>
+                <h3
+                  class="idsk-text-body-1"
+                >
+                  Doména gov.sk je oficálna
+                </h3>
+                <div
+                  class="py-2.5"
+                >
+                  <p>
+                    Toto je oficiálna webová stránka orgánu verejnej moci Slovenskej republiky. Oficiálne stránky využívajú najmä doménu gov.sk. 
+                    <a
+                      href="https://www.slovensko.sk/sk/agendy/agenda/_organy-verejnej-moci"
+                    >
+                      Odkazy na jednotlivé webové sídla orgánov verejnej moci nájdete na tomto odkaze.
+                    </a>
+                  </p>
+                  
+
+                </div>
+              </div>
+              <div>
+                <h3
+                  class="idsk-text-body-1"
+                >
+                  Táto stránka je zabezpečená
+                </h3>
+                <div
+                  class="py-2.5"
+                >
+                  <p>
+                    Buďte pozorní a vždy sa uistite, že zdieľate informácie iba cez zabezpečenú webovú stránku verejnej správy SR. Zabezpečená stránka vždy začína https:// pred názvom domény webového sídla.
+                  </p>
+                  
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="header-container"
+        >
+          <a
+            class="inline-block h-[1.875rem] tb1:h-10 w-60 relative"
+            href="/"
+          >
+            <span
+              style="box-sizing: border-box; display: block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px;"
+            >
+              <img
+                data-nimg="fill"
+                decoding="async"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain; object-position: left;"
+              />
+              <noscript />
+            </span>
+          </a>
+          <a
+            class="icon-link dm1:hidden hidden"
+            href="/"
+          >
+            <test-file-stub
+              classname="h-6"
+            />
+          </a>
+          <div
+            class="hidden dm1:flex flex-auto items-center h-full text-blue-600"
+          >
+            <div
+              class="flex-auto"
+            />
+            <div
+              class="mx-5 hidden dm1:flex"
+            >
+              <div
+                class="searchbar__wrapper"
+              >
+                <input
+                  class="searchbar searchbar--medium w-72 max-w-96 pr-10"
+                  placeholder="header_search.placeholder"
+                />
+                <button
+                  class="searchbar__button searchbar__button--medium"
+                >
+                  <svg
+                    class="searchbar__icon--medium"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14Zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <button
+              class="primary-button primary-button--basic primary-button--medium"
+            >
+              Login
+            </button>
+          </div>
+          <div
+            class="flex-auto dm1:hidden"
+          />
+          <button
+            class="menu-button dm1:hidden"
+          >
+            <span>
+              Menu
+            </span>
+             
+            <svg
+              class="menu-button__icon"
+              fill="none"
+              height="1em"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 18h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1Zm0-5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1ZM3 7c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1Z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="header-container__menu"
+        >
+          <nav
+            class="navigation navigation--full"
+          >
+            <span
+              class="navigation__link"
+            >
+              <a
+                href="/"
+              >
+                Home
+              </a>
+            </span>
+            <span
+              class="navigation__link"
+            >
+              <a
+                href="/clanok-1"
+              >
+                Test
+              </a>
+            </span>
+            <span
+              class="navigation__link"
+            >
+              <a
+                href="/test-test"
+              >
+                ZU
+              </a>
+            </span>
+            <div
+              class="dropdown__wrapper navigation__dropdown"
+            >
+              <button
+                class="dropdown dm1:px-3"
+              >
+                <span>
+                  Drop Down
+                </span>
+                <svg
+                  class="dropdown__icon"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.88 9.29 12 13.17 8.12 9.29a.996.996 0 1 0-1.41 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59a.996.996 0 0 0 0-1.41c-.39-.38-1.03-.39-1.42 0Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+              <ul
+                class="dropdown__options hidden navigation__dropdown-options"
+                data-testid="dropdown-options"
+              >
+                <li
+                  class="dropdown__option"
+                >
+                  <a
+                    href="/clanok-1"
+                  >
+                    option 1
+                  </a>
+                </li>
+                <li
+                  class="dropdown__option"
+                >
+                  <a
+                    href="/clanok-1"
+                  >
+                    option 2
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <div
+          class="header-container__menu--mobile"
+        >
+          <div
+            class="menu--mobile hidden"
+          >
+            <nav
+              class="navigation"
+            >
+              <span
+                class="navigation__label"
+              >
+                Menu
+              </span>
+              <span
+                class="navigation__link"
+              >
+                <a
+                  href="/"
+                >
+                  Home
+                </a>
+              </span>
+              <span
+                class="navigation__link"
+              >
+                <a
+                  href="/clanok-1"
+                >
+                  Test
+                </a>
+              </span>
+              <span
+                class="navigation__link"
+              >
+                <a
+                  href="/test-test"
+                >
+                  ZU
+                </a>
+              </span>
+              <div
+                class="dropdown__wrapper navigation__dropdown"
+              >
+                <button
+                  class="dropdown dm1:px-3"
+                >
+                  <span>
+                    Drop Down
+                  </span>
+                  <svg
+                    class="dropdown__icon"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.88 9.29 12 13.17 8.12 9.29a.996.996 0 1 0-1.41 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59a.996.996 0 0 0 0-1.41c-.39-.38-1.03-.39-1.42 0Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+                <ul
+                  class="dropdown__options hidden navigation__dropdown-options"
+                  data-testid="dropdown-options"
+                >
+                  <li
+                    class="dropdown__option"
+                  >
+                    <a
+                      href="/clanok-1"
+                    >
+                      option 1
+                    </a>
+                  </li>
+                  <li
+                    class="dropdown__option"
+                  >
+                    <a
+                      href="/clanok-1"
+                    >
+                      option 2
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <button
+              class="primary-button primary-button--basic primary-button--medium w-full mt-4"
+            >
+              Login
+            </button>
+          </div>
+        </div>
+      </header>
+    </div>
+    <div
+      data-focus-guard="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="-1"
+    />
+    <main
+      class="page-layout__main bg-white gap-6 ml-"
+    >
+      <div
+        class="page-layout__title"
+      />
+      <div
+        class="page-layout__body"
+      >
+        <div>
+          <h1
+            class="mb-10 text-6xl font-black"
+          >
+            Aktuality
+          </h1>
+          <p
+            class="mb-10"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque molestie, justo lacinia hendrerit posuere, ipsum ipsum lobortis dui, aliquam pulvinar ex felis at nunc. Aenean eu felis sem. Vivamus eu mauris non orci ullamcorper ultricies quis sed leo. Vivamus non velit sed diam aliquam ornare.
+          </p>
+          <div>
+            <div
+              class="mb-10 flex gap-2.5 flex-wrap"
+            />
+            <div
+              class="mb-10"
+            >
+              <article
+                class="mb-4"
+              >
+                <div
+                  class="idsk-anchor-card idsk-anchor-card--vertical idsk-anchor-card--grid"
+                  data-testid="anchor-card"
+                >
+                  <div
+                    class="article-card__image-wrapper pt-0"
+                  >
+                    <span
+                      style="box-sizing: border-box; display: block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;"
+                    >
+                      <span
+                        style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 62.5% 0px 0px 0px;"
+                      />
+                      <img
+                        alt=""
+                        data-nimg="responsive"
+                        decoding="async"
+                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"
+                      />
+                      <noscript />
+                    </span>
+                  </div>
+                  <div
+                    class="flex-1"
+                  >
+                    <p
+                      class="article-card__date-tags--top"
+                    >
+                      <time
+                        datetime="30.06.2022"
+                      >
+                        30.06.2022
+                      </time>
+                       
+                    </p>
+                    <a
+                      class="idsk-anchor-card__heading"
+                    >
+                      Hello world Hello world
+                    </a>
+                    <div
+                      class="article-card__text"
+                    >
+                      <p>
+                        Lorem ipsum
+                      </p>
+                      
+
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <ul
+              class="flex items-center text-primary gap-5"
+            >
+              <li
+                class="previous disabled"
+              >
+                <a
+                  aria-disabled="true"
+                  aria-label="Previous page"
+                  class="idsk-link-m "
+                  rel="prev"
+                  role="button"
+                  tabindex="-1"
+                >
+                  Preview
+                </a>
+              </li>
+              <li
+                class="selected"
+              >
+                <a
+                  aria-current="page"
+                  aria-label="Page 1 is your current page"
+                  class="idsk-link-m text-blue-600 font-bold no-underline"
+                  rel="canonical"
+                  role="button"
+                  tabindex="-1"
+                >
+                  1
+                </a>
+              </li>
+              <li
+                class="next disabled"
+              >
+                <a
+                  aria-disabled="true"
+                  aria-label="Next page"
+                  class="idsk-link-m "
+                  rel="next"
+                  role="button"
+                  tabindex="-1"
+                >
+                  Next
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer
+      class="footer-container"
+    >
+      <div
+        class="footer-container__content"
+      >
+        <div
+          class="grid grid-cols-1 tb1:grid-cols-2 tb2:grid-cols-4 gap-5"
+        >
+          <div
+            class="footer-container__section"
+          >
+            <p
+              class="footer-container__section-heading"
+            >
+              Informácie
+            </p>
+            <a
+              href="/test"
+            >
+              Informácie a návody
+            </a>
+            <a
+              href="/test"
+            >
+              Pre občanov
+            </a>
+          </div>
+          <div
+            class="footer-container__section"
+          >
+            <p
+              class="footer-container__section-heading hidden tb1:block"
+            >
+               
+            </p>
+            <a
+              href="/test"
+            >
+              Informácie a návody
+            </a>
+            <a
+              href="/test"
+            >
+              Často kladené otázky
+            </a>
+          </div>
+          <div
+            class="footer-container__section"
+          >
+            <p
+              class="footer-container__section-heading"
+            >
+              Podpora
+            </p>
+            <a
+              href="/test"
+            >
+              Informácie a návody
+            </a>
+            <a
+              href="/test"
+            >
+              Pre občanov
+            </a>
+          </div>
+          <div
+            class="footer-container__section tb2:items-end"
+          >
+            <p
+              class="footer-container__section-heading"
+            >
+              Rýchle odkazy
+            </p>
+            <a
+              href="/test"
+            >
+              Často kladené otázky
+            </a>
+          </div>
+        </div>
+        <aside
+          class="footer-container__aside"
+        >
+          <div
+            class="footer-container__links-list"
+          >
+            <a
+              href="/test"
+            >
+              Mapa stránok
+            </a>
+            <a
+              href="/test"
+            >
+              Ochrana osobných údajov
+            </a>
+            <a
+              href="/test"
+            >
+              RSS
+            </a>
+          </div>
+          <div
+            class="flex justify-between flex-wrap gap-8"
+          >
+            <div>
+              <p>
+                <span>
+                  Prevádzkovateľom služby je Ministerstvo investícií, regionálneho rozvoja a informatizácie SR.
+                </span>
+              </p>
+              
+
+
+              <p>
+                <span>
+                  Vytvorené v súlade s Jednotným dizajn manuálom elektronických služieb.
+                </span>
+              </p>
+              
+
+            </div>
+            <div
+              class="relative w-40 flex items-center"
+            >
+              <span
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+              >
+                <span
+                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27162%27%20height=%2736%27/%3e"
+                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                  />
+                </span>
+                <img
+                  data-nimg="intrinsic"
+                  decoding="async"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                />
+                <noscript />
+              </span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </footer>
+  </div>
+</DocumentFragment>
+`;

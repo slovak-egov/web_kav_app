@@ -1,0 +1,28 @@
+namespace: 'upvs-web-svk'
+replicas: 3
+
+image:
+  repository: '${IMAGE_NAME}'
+  tag: '${IMAGE_TAG}'
+
+ingress:
+  enabled: true
+  domain: 'www.slovensko.${CI_ENVIRONMENT_NAME_LOWER}.skit.zone'
+#  tls:
+#    enabled: false
+#    cert:
+#    key:
+
+secret:
+  create: true
+
+next_public_drupal_base_url: '${DC_DRUPAL_BASE_URL}/${DC_DRUPAL_API_PATH_PREFIX}'
+next_media_domain: '${DC_NEXT_MEDIA_DOMAIN}'
+next_rebuild_secret: '${DC_NEXT_REBUILD_SECRET}'
+next_drupal_debug: '${DC_NEXT_DRUPAL_DEBUG}'
+consumer_client_id: '${DC_CONSUMER_CLIENT_ID}'
+consumer_client_secret: '${DC_CONSUMER_CLIENT_SECRET}'
+next_preview_secret: '${DC_NEXT_PREVIEW_SECRET}'
+next_public_ga_measurement_id: '${DC_NEXT_PUBLIC_GA_MEASUREMENT_ID}'
+next_public_gtm_measurement_id: '${DC_NEXT_PUBLIC_GTM_MEASUREMENT_ID}'
+next_public_chatbot_api_url: '${DC_NEXT_PUBLIC_CHATBOT_API_URL}'

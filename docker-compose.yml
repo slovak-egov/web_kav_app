@@ -1,0 +1,87 @@
+version: '3.9'
+
+networks:
+  traefik_net:
+    name: "traefik_net"
+    external: true
+
+services:
+  portal-kav-slovensko:
+    container_name: "portal-kav-slovensko"
+    image: "${IMAGE_NAME}:${IMAGE_TAG}"
+    restart: "unless-stopped"
+    networks:
+      - "traefik_net"
+    deploy:
+      resources:
+        limits:
+          memory: "4G"
+    ports:
+      - "3000:3000"
+    environment:
+      TZ: 'Europe/Bratislava'
+      BUILDER_MODE: 'false'
+      NEXT_PUBLIC_DRUPAL_BASE_URL: 'https://cms.kav.skit.zone/'
+      SERVER_BASE_URL: 'https://portal.kav.skit.zone'
+      DRUPAL_BASE_URL: 'https://cms.kav.skit.zone'
+      NEXT_MEDIA_DOMAIN: 'rgw.slovenskoit.sk'
+      CONSUMER_CLIENT_ID: ${DC_CONSUMER_CLIENT_ID}
+      CONSUMER_CLIENT_SECRET: ${DC_CONSUMER_CLIENT_SECRET}
+      NEXT_PREVIEW_SECRET: "SECRET"
+      NEXT_REBUILD_SECRET: "SECRET"
+      NEXT_DRUPAL_DEBUG: 'true'
+      AUTH_API_CLIENT_VERIFY:
+      AUTH_API_CLIENT_CA:
+      FEEDBACK_API_BASE_URL: "https://10.20.1.116:8443"
+      EGOV_SERVICE_API_BASE_URL: 'https://10.20.1.116:84433'
+      EGOV_SERVICE_LOCATOR_API_BASE_URL: 'https://10.20.1.116:8443'
+      API_BASE_URL:
+      NODE_TLS_REJECT_UNAUTHORIZED: '0'
+      MAIL_SMTP: 'slovenskoit-sk.mail.protection.outlook.com'
+      MAIL_PORT: 25
+      MAIL_USER:
+      MAIL_PWD:
+      MAIL_SECURE: 'false'
+      MAIL_TLS: 'false'
+      MAIL_DEBUG: 'true'
+      NEXT_PUBLIC_SHOW_FEEDBACK: 'false'
+
+      NEXT_PUBLIC_RECAPTCHA_SITE_KEY: ${DC_NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+      RECAPTCHA_SECRET_KEY: ${DC_RECAPTCHA_SECRET_KEY}
+
+      NEXT_PUBLIC_CHATBOT_API_URL: ${DC_NEXT_PUBLIC_CHATBOT_API_URL}
+      NEXT_PUBLIC_CHATBOT_END_CIID: 0046e8cf-4c57-b246-a796-717f1b6c3e32
+      NEXT_PUBLIC_CHATBOT_BUG_CIID: 0d469540-06f6-9d44-a8ef-454c06cd9ef4
+      NEXT_PUBLIC_CHATBOT_OUN_CIID: 5c4d3b18-a416-1b48-9175-49e78f27e3ef
+
+      NEXT_PUBLIC_MODUL_CIID: 0046e8cf-4c57-b246-a796-717f1b6c3e32
+      NEXT_PUBLIC_MOJE_SLOVENSKO_APP_BASE_URL: https://moje.slovensko.dev.skit.zone
+      NEXT_PUBLIC_ROZHODNUTIA_APP_BASE_URL: http://rozhodnutia.slovensko.dev.skit.zone
+      NEXT_PUBLIC_AUTH_COOKIES_BASE_DOMAIN: .kav.skit.zone
+
+      NEXT_PUBLIC_GA_MEASUREMENT_ID: '${DC_NEXT_PUBLIC_GA_MEASUREMENT_ID}'
+      NEXT_PUBLIC_GTM_MEASUREMENT_ID: '${DC_NEXT_PUBLIC_GTM_MEASUREMENT_ID}'
+      # NEXT_PUBLIC_RECAPTCHA_SITE_KEY: ${DC_NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+      # RECAPTCHA_SECRET_KEY: ${DC_RECAPTCHA_SECRET_KEY}
+      NEXT_HTTP_PROXY_HOSTNAME: 'proxy.cloud.slovenskoit.sk'
+      NEXT_HTTP_PROXY_PORT: 3128
+      SERVICE_PROVIDER_METADATA_FILE: metadata/sp_metadata.xml
+      IDENTITY_PROVIDER_METADATA_FILE: metadata/idp_metadata.xml
+    labels:
+      traefik.enable: "true"
+      traefik.http.services.portal-kav.loadbalancer.server.port: "3000"
+      traefik.http.services.portal-kav.loadbalancer.server.scheme: "http"
+
+      traefik.http.routers.portal-kav-http.service: "portal-kav"
+      traefik.http.routers.portal-kav-http.rule: "Host(`portal.kav.skit.zone`)"
+      traefik.http.routers.portal-kav-http.entrypoints: "web"
+      traefik.http.routers.portal-kav-http.middlewares: "kav-redirect-https"
+
+      traefik.http.middlewares.portal-kav-redirect-https.redirectscheme.permanent: "true"
+      traefik.http.middlewares.portal-kav-redirect-https.redirectscheme.scheme: "https"
+
+      traefik.http.routers.portal-kav-https.service: "portal-kav"
+      traefik.http.routers.portal-kav-https.rule: "Host(`portal.kav.skit.zone`)"
+      traefik.http.routers.portal-kav-https.entrypoints: "websecure"
+      traefik.http.routers.portal-kav-https.tls: "true"
+      traefik.http.routers.portal-kav-https.tls.certresolver: "smallstep"

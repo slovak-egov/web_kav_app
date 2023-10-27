@@ -1,0 +1,9 @@
+.gitlab-ci.yml
+.next
+docker-compose.yml
+docker-compose-WEB.yml
+docker-compose-BUILDER.yml
+node_modules
+package-lock.json
+public
+README.md

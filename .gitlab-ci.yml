@@ -1,0 +1,123 @@
+stages:
+  - .pre
+  # - test
+  - build
+  - deploy
+
+workflow:
+  rules:
+    # commit or merge
+    - if: $CI_COMMIT_BRANCH
+    # tag
+    - if: $CI_COMMIT_TAG =~ /^\d{1,3}\.\d{1,3}\.\d{1,3}(-rc[1-9]\d?)?$/
+
+###      PRE       ###
+"Version":
+  stage: .pre
+  tags:
+    - "init"
+  environment: DEV
+  image: "bash:5.2"
+  before_script:
+    - apk add curl jq
+  script:
+    - source ci/lib-release.sh
+    - set -x # Activate debug.
+    - '[[ -z "${CI_COMMIT_BRANCH}" ]] || create_build_number_version_env'
+    - '[[ -z "${CI_COMMIT_TAG}" ]] || create_tag_version_env'
+  artifacts:
+    reports:
+      dotenv: "variables.env"
+  rules:
+    - if: $CI_COMMIT_BRANCH == "develop"
+    - if: $CI_COMMIT_BRANCH =~ /^release(\/.+)?$/
+    - if: $CI_COMMIT_BRANCH =~ /^devops\/.*$/
+    - if: $CI_COMMIT_TAG =~ /^\d{1,3}\.\d{1,3}\.\d{1,3}(-rc[1-9]\d?)?$/
+
+###      TEST       ###
+# test-job:
+#   stage: test
+#   tags:
+#     - "test"
+#   image: node:18-alpine
+#   variables:
+#     NPM_TOKEN: "${CI_JOB_TOKEN}"
+#   before_script:
+#     - npm ci --cache .npm --prefer-offline
+#   script:
+#     - npm install
+#     - npm run test-all
+#   cache:
+#     key: "${CI_COMMIT_REF_SLUG}"
+#     policy: pull-push
+#     paths:
+#       - ".npm"
+#   rules:
+#     - if: $CI_COMMIT_BRANCH !~ /^devops\/.*$/ && $CI_COMMIT_TAG == null
+
+###     BUILD       ###
+"Build Image":
+  stage: build
+  tags:
+    - "build"
+  environment: DEV
+  image: "docker:stable"
+  needs:
+    - "Version"
+    # - job: "test-job"
+    #   optional: true
+  before_script:
+    - apk add --update bash curl jq
+  script:
+    - export NEXT_BUILD_ID=$(cat /proc/sys/kernel/random/uuid)
+    - bash -xc "source ./ci/lib-build.sh; docker_build_image NEXT_BUILD_ID=${NEXT_BUILD_ID} DOCKER_BUILD_VERSION=${VERSION} NPM_TOKEN=${CI_JOB_TOKEN}"
+    - bash -xc "source ./ci/lib-build.sh; docker_push_image"
+  rules:
+    - if: $CI_COMMIT_BRANCH == "develop"
+    - if: $CI_COMMIT_BRANCH =~ /^release(\/.+)?$/
+    - if: $CI_COMMIT_BRANCH =~ /^devops\/.*$/
+    - if: $CI_COMMIT_TAG =~ /^\d{1,3}\.\d{1,3}\.\d{1,3}(-rc[1-9]\d?)?$/
+
+###     DEPLOY      ###
+"Deploy WEB":
+  stage: deploy
+  tags:
+    - "deploy"
+  environment: DEV
+  image: "kroniak/ssh-client:3.15"
+  needs:
+    - "Version"
+    - "Build Image"
+  variables:
+    SSH_CONNECT: "deploy@portal.kav.skit.zone"
+  before_script:
+    - apk add --update bash curl jq
+  script:
+    - source ./ci/lib-deploy.sh
+    - set -x # Activate debug.
+    - deploy_docker_compose "${CI_PROJECT_NAME}" "docker-compose.yml"
+    - check_url "https://portal.kav.skit.zone" 30 10 200
+    - set_cron "*/30 * * * *" "/usr/bin/docker image prune -af > /dev/null"
+  rules:
+    - if: $CI_COMMIT_BRANCH == "develop"
+    - if: $CI_COMMIT_TAG =~ /^\d{1,3}\.\d{1,3}\.\d{1,3}(-rc[1-9]\d?)?$/
+# "Deploy k8s":
+#   stage: deploy
+#   tags:
+#     - "deploy"
+#   environment: DEV
+#   image: "kroniak/ssh-client:3.11"
+#   variables:
+#     SSH_CONNECT: "deploy@k3s.dev.skit.zone"
+#   before_script:
+#     - apk add --update bash curl jq
+#   script:
+#     - source helm_chart-version-dev.env
+#     - source ./ci/lib-deploy.sh
+#     - set -x # Activate debug.
+#     - deploy_helm_registry_login
+#     - deploy_helm_chart "oci://gitlab-registry.slovenskoit.sk/components/upvs-web-svk/esvk_dp_svk_helm/upvs-web-svk" "${CHART_VERSION_UPVS_WEB_SVK}" "upvs-web-svk-values.yml"
+#     - check_kubernetes_pods 20 "upvs-web-svk"
+#   rules:
+#     - if: $CI_COMMIT_BRANCH == "develop"
+#     - if: $CI_COMMIT_BRANCH =~ /^devops\/.*$/
