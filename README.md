@@ -1,3 +1,47 @@
+## Setup
+
+### Cloning the GitHub Repository
+
+Clone this repository to your local machine:
+
+```bash
+git clone git@github.com:slovak-egov/web_kav_app.git
+```
+
+### Formatting
+
+Run automatic code formatting (prettier) with this command:
+
+```bash
+npm run format
+```
+
+### Testing
+
+Run linting and unit tests with this command:
+
+```bash
+npm run test-all
+```
+
+### UI Translations
+
+To download from Drupal CMS and create (or update) common.json files for UI translations run
+
+```bash
+npm run fetch-locales
+```
+locales.json in root directory and common.json files in public/locales directory will be created (or updated)
+Note, by running npm run build, ``npm run fetch-locales`` runs followed by ``next build``.
+
+After adding new phrase or editing its key run
+
+```bash
+npm run export-locales
+```
+translations.svksk_ui_translation.yml file will be created in root directory to be copied to Drupal CMS project.
+
+## Local development setup
 
 ### Save gl access token to NPM_TOKEN
 
@@ -56,64 +100,13 @@ npm run dev:ssl
 
 The next.js server runs at https://localhost:3000
 
-# ÚPVS: WEB Informačný portál kav.sk
+---------------
 
-Web portal beta.kav.sk
 
 ## Environments
 
 ### DEV
-http://www.kav.dev.skit.zone/
-
-### INT
-http://www.kav.int.skit.zone/
-
-### QA
-http://www.kav.qa.skit.zone/
-
-
-## Setup
-
-### Cloning the GitHub Repository
-
-Clone this repository to your local machine:
-
-```bash
-git clone git@github.com:slovak-egov/web_kav_app.git
-```
-
-### Formatting
-
-Run automatic code formatting (prettier) with this command:
-
-```bash
-npm run format
-```
-
-### Testing
-
-Run linting and unit tests with this command:
-
-```bash
-npm run test-all
-```
-
-### UI Translations
-
-To download from Drupal CMS and create (or update) common.json files for UI translations run
-
-```bash
-npm run fetch-locales
-```
-locales.json in root directory and common.json files in public/locales directory will be created (or updated)
-Note, by running npm run build, ``npm run fetch-locales`` runs followed by ``next build``.
-
-After adding new phrase or editing its key run
-
-```bash
-npm run export-locales
-```
-translations.svksk_ui_translation.yml file will be created in root directory to be copied to Drupal CMS project.
+http://www.portal.kav.skit.zone/
 
 
 ## Notes
