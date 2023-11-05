@@ -79,7 +79,7 @@ http://www.kav.qa.skit.zone/
 Clone this repository to your local machine:
 
 ```bash
-git clone git@gitlab.slovenskoit.sk:components/upvs-web-svk/esvk_web_slovensko_sk_app.git
+git clone git@github.com:slovak-egov/web_kav_app.git
 ```
 
 ### Formatting
